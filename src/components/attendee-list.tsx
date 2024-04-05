@@ -1,11 +1,7 @@
 import searchicon from '../assets/images/search-icon.svg';
 import tdbutton from '../assets/images/td-button.svg';
-import {
-  ChevronsLeft,
-  ChevronLeft,
-  ChevronsRight,
-  ChevronRight,
-} from '../assets/images/chevrons.js';
+import IconButton from '../components/icon-button.js';
+import TFooter from './tfooter.js';
 
 function AttendeeList() {
   return (
@@ -75,47 +71,15 @@ function AttendeeList() {
                     7 days ago
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
-                    <button className="bg-black/20 border border-white/10 rounded-md p-1.5">
+                    <IconButton>
                       <img src={tdbutton} />
-                    </button>
+                    </IconButton>
                   </td>
                 </tr>
               );
             })}{' '}
           </tbody>
-
-          <tfoot>
-            <tr>
-              <td
-                className="py-3 px-4 text-sm text-zinc-300 text-left"
-                colSpan={3}
-              >
-                Showing 10 of 228 items
-              </td>
-              <td
-                className="py-3 px-4 text-sm text-zinc-300 text-right"
-                colSpan={3}
-              >
-                <div className="inline-flex items-center gap-8">
-                  <span>Page 1 of 23</span>
-                  <div className="flex gap-1.5">
-                    <button className="bg-black/20 border border-white/10 rounded-md p-1.5">
-                      <ChevronsLeft />
-                    </button>
-                    <button className="bg-black/20 border border-white/10 rounded-md p-1.5">
-                      <ChevronLeft />
-                    </button>
-                    <button className="bg-black/20 border border-white/10 rounded-md p-1.5">
-                      <ChevronRight />
-                    </button>
-                    <button className="bg-black/20 border border-white/10 rounded-md p-1.5">
-                      <ChevronsRight />
-                    </button>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tfoot>
+          <TFooter />{' '}
         </table>
       </div>
     </div>
